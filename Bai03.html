@@ -14,7 +14,9 @@
         <form class="mb-3 row">
             <label for="full-name" class="col-md-3 col-form-label">Nhập họ tên</label>
             <div class="col-md-6">
-                <input type="password" class="form-control" id="full-name">
+                <input type="text" class="full-name-txt form-control" id="full-name">
+                <div class="invalid-feedback">
+                </div>
             </div>
             <div class="col-md-3">
                 <button type="button" class="btn btn-primary">Tách họ tên</button>
@@ -32,15 +34,14 @@
             </div>
             <div class="col-md-3">
                 <label for="last-name" class="form-label">Tên</label>
-                <div class="input-group has-validation">
-                    <input type="text" class="form-control" id="last-name" disabled readonly>
-                </div>
+                <input type="text" class="form-control" id="last-name" disabled readonly>
             </div>
         </div>
     </main>
 
     <script src="./js/jQuery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/Bai03.js"></script>
 </body>
 
 </html>

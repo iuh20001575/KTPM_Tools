@@ -14,7 +14,10 @@
         <form class="mb-3 row">
             <label for="full-name" class="col-md-3 col-form-label">Nhập mảng</label>
             <div class="col-md-9">
-                <input type="password" class="form-control" id="full-name">
+                <!-- is-invalid -->
+                <input type="text" class="form-control" id="full-name">
+                <div class="invalid-feedback">
+                </div>
             </div>
             <div class="col-md-12 text-center mt-3">
                 <button type="button" class="btn btn-primary">Sắp mảng tăng dần</button>
@@ -24,13 +27,15 @@
         <div class="row mt-5">
             <label for="result" class="col-md-3 col-form-label">Kết quả</label>
             <div class="col-md-9">
-                <input type="password" class="form-control" id="result" readonly disabled>
+                <input type="text" class="form-control" id="result" readonly disabled>
             </div>
         </div>
     </main>
 
     <script src="./js/jQuery.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/quickSort.js"></script>
+    <script src="./js/Bai04.js"></script>
 </body>
 
 </html>
