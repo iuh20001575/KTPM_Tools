@@ -11,34 +11,36 @@
 
 <body>
     <main class="shadow p-3 mb-5 rounded">
-        <form class="mb-3 row">
-            <label for="so-cu" class="col-md-2 col-form-label">Số cũ</label>
-            <div class="col-md-10">
-                <input type="text" class="so-cu-txt form-control" id="so-cu">
-                <div class="invalid-feedback">
+        <form class="mb-3 row gap-3">
+            <div class="row">
+                <label for="so-cu" class="col-md-2 col-form-label">Số cũ</label>
+                <div class="col-md-10">
+                    <input type="text" class="so-cu-txt form-control" id="so-cu">
                 </div>
             </div>
-            <label for="so-moi" class="col-md-2 col-form-label">Số mới</label>
-            <div class="col-md-10">
-                <input type="text" class="so-moi-txt form-control" id="so-moi">
-                <div class="invalid-feedback">
+            <div class="row">
+                <label for="so-moi" class="col-md-2 col-form-label">Số mới</label>
+                <div class="col-md-10">
+                    <input type="text" class="so-moi-txt form-control" id="so-moi">
+                    <input type="hidden" class="form-control is-invalid">
+                    <div class="invalid-feedback">
+                    </div>
                 </div>
             </div>
-            <label for="thanh-tien" class="col-md-3 col-form-label">Thành tiền</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control" id="thanh-tien" disabled readonly>
+            <div class="row"><label for="thanh-tien" class="col-md-3 col-form-label">Thành tiền</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="thanh-tien" disabled readonly>
+                </div>
             </div>
-            
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-primary" id="button-tinh">Tính</button>
+                </div>
+                <div class="col-md-6 text-center">
+                    <button type="button" class="btn btn-primary" id="button-dong">Đóng</button>
+                </div>
+            </div>
         </form>
-
-        <div class="row">
-            <div class="col-md-6 text-center">
-                <button type="button" class="btn btn-primary" id="button-tinh">Tính</button>
-            </div>
-            <div class="col-md-6 text-center">
-                <button type="button" class="btn btn-primary" id="button-dong">Đóng</button>
-            </div>
-        </div>
     </main>
 
     <script src="./js/jQuery.js"></script>
