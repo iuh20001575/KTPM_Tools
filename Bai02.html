@@ -11,36 +11,43 @@
 
 <body>
     <main class="shadow p-3 mb-5 rounded">
-        <form class="mb-3 row">
-            <label for="so-decimal1" class="col-md-2 col-form-label">Decimal:</label>
-            <div class="col-md-7">
-                <input type="text" class="so-decimal1-txt form-control" id="so-decimal1">
-                <div class="invalid-feedback">
+        <form class="mb-5 d-flex flex-column gap-3">
+            <div class="row">
+                <label for="so-decimal1" class="col-md-2 col-form-label">Decimal:</label>
+                <div class="col-md-7">
+                    <input type="text" class="so-decimal1-txt form-control flex-fill" id="so-decimal1">
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" id="btnDecToBin" class="w-100 btn btn-primary">Convert</button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-primary">Convert</button>
-            </div>
 
-            <label for="so-binary1" class="col-md-2 col-form-label">Binary:</label>
-            <div class="col-md-10">
-                <input type="text" class="form-control" id="so-binary1" disabled readonly>
+            <div class="row">
+                <label for="so-binary1" class="col-md-2 col-form-label">Binary:</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="so-binary1" disabled readonly>
+                </div>
             </div>
         </form>
-        <form class="mb-3 row">
-            <label for="so-binary2" class="col-md-2 col-form-label">Binary:</label>
-            <div class="col-md-7">
-                <input type="text" class="so-binary2-txt form-control" id="so-binary2">
-                <div class="invalid-feedback">
+        <form class="mb-3 d-flex flex-column gap-3">
+            <div class="row">
+                <label for="so-binary2" class="col-md-2 col-form-label">Binary:</label>
+                <div class="col-md-7">
+                    <input type="text" class="so-binary2-txt form-control" id="so-binary2">
+                    <div class="invalid-feedback">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" id="btnBinToDec" class="w-100 btn btn-primary">Convert</button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-primary">Convert</button>
-            </div>
-
-            <label for="so-decimal2" class="col-md-2 col-form-label">Decimal:</label>
-            <div class="col-md-10">
-                <input type="text" class="form-control" id="so-decimal2" disabled readonly>
+            <div class="row">
+                <label for="so-decimal2" class="col-md-2 col-form-label">Decimal:</label>
+                <div class="col-md-10">
+                    <input type="text" class="form-control" id="so-decimal2" disabled readonly>
+                </div>
             </div>
         </form>
     </main>
