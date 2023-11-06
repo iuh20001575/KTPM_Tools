@@ -28,29 +28,26 @@ buttonDecToBin.addEventListener('click', () => {
         return;
     }
 
-    const regexSo = /^\d+$/;
-    if (!regexSo.test(value)) {
+    if (Number.isNaN(+value)) {
         decimalInput.classList.add('is-invalid');
         invalidFeedbacks[0].innerText = 'Chuỗi được nhập phải là số';
         return;
     }
 
-    const regexSoNguyen = /^-?\d+$/;
-    if (!regexSoNguyen.test(value)) {
+    if (!Number.isInteger(+value)) {
         decimalInput.classList.add('is-invalid');
         invalidFeedbacks[0].innerText = 'Chuỗi được nhập phải là số nguyên';
         return;
     }
 
-    const regexSoNguyenDuong = /^[1-9]\d*$/;
-    if (!regexSoNguyenDuong.test(value)) {
+    if (+value < 0) {
         decimalInput.classList.add('is-invalid');
         invalidFeedbacks[0].innerText =
             'Chuỗi được nhập phải là số nguyên dương';
         return;
     }
 
-    const bin = DecToBin(value);
+    const bin = DecToBin(+value);
 
     resultBinaryInput.value = bin;
 });
@@ -70,7 +67,7 @@ buttonBinToDec.addEventListener('click', () => {
             'Chuỗi được nhập phải là chuỗi nhị phân';
         return;
     }
-    const regexDoDaiChuoi = /^.{1,64}$/;
+    const regexDoDaiChuoi = /^.{1,63}$/;
     if (!regexDoDaiChuoi.test(value)) {
         binaryInput.classList.add('is-invalid');
         invalidFeedbacks[1].innerText = 'Chuỗi không được quá 64 ký tự';
