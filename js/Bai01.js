@@ -20,18 +20,31 @@ tinhBtn.addEventListener('click', () => {
     const soCu = soCuInput.value.trim();
     const soMoi = soMoiInput.value.trim();
     
-    if (!soCu || !soMoi) {
+    if (!soMoi) {
         soCuInput.classList.add('is-invalid');
         soMoiInput.classList.add('is-invalid');
-        invalidFeedback.innerText = 'Số cũ và số mới không được để trống';
+        invalidFeedback.innerText = 'Số mới không được để trống';
+        return;
+    }
+    if (!soCu) {
+        soCuInput.classList.add('is-invalid');
+        soMoiInput.classList.add('is-invalid');
+        invalidFeedback.innerText = 'Số cũ không được để trống';
         return;
     }
     const regexSoNguyenDuong = /^[1-9]\d*$/;
-    if (!regexSoNguyenDuong.test(soCu) || !regexSoNguyenDuong.test(soMoi)) {
+    if (!regexSoNguyenDuong.test(soCu)) {
         soCuInput.classList.add('is-invalid');
         soMoiInput.classList.add('is-invalid');
         invalidFeedback.innerText =
-            'Số cũ và số mới phải là số nguyên dương';
+            'Số cũ phải là số nguyên dương';
+        return;
+    }
+    if (!regexSoNguyenDuong.test(soMoi)) {
+        soCuInput.classList.add('is-invalid');
+        soMoiInput.classList.add('is-invalid');
+        invalidFeedback.innerText =
+            'Số mới phải là số nguyên dương';
         return;
     }
 
