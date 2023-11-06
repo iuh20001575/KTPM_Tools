@@ -27,34 +27,26 @@ buttonDecToBin.addEventListener('click', () => {
         invalidFeedbacks[0].innerText = 'Chuỗi không được để trống';
         return;
     }
-    const regexSoNguyenDuong = /^[1-9]\d*$/;
-    if (!regexSoNguyenDuong.test(value)) {
+
+    const regexSo = /^\d+$/;
+    if (!regexSo.test(value)) {
         decimalInput.classList.add('is-invalid');
-        invalidFeedbacks[0].innerText =
-            'Chuỗi được nhập phải là số nguyên dương';
+        invalidFeedbacks[0].innerText = 'Chuỗi được nhập phải là số';
         return;
     }
+
     const regexSoNguyen = /^-?\d+$/;
     if (!regexSoNguyen.test(value)) {
         decimalInput.classList.add('is-invalid');
         invalidFeedbacks[0].innerText = 'Chuỗi được nhập phải là số nguyên';
         return;
     }
-    if (!regexSoNguyen.test(value)) {
+
+    const regexSoNguyenDuong = /^[1-9]\d*$/;
+    if (!regexSoNguyenDuong.test(value)) {
         decimalInput.classList.add('is-invalid');
-        invalidFeedbacks[0].innerText = 'Chuỗi được nhập phải là số nguyên';
-        return;
-    }
-    const regexSo = /^\d+$/;
-    if (!regexSo.test(value)) {
-        decimalInput.classList.add('is-invalid');
-        invalidFeedback.innerText = 'Chuỗi được nhập phải là số';
-        return;
-    }
-    const regexDoDaiChuoi = /^.{1,64}$/;
-    if (!regexDoDaiChuoi.test(value)) {
-        decimalInput.classList.add('is-invalid');
-        invalidFeedback.innerText = 'Chuỗi không được quá 64 ký tự';
+        invalidFeedbacks[0].innerText =
+            'Chuỗi được nhập phải là số nguyên dương';
         return;
     }
 

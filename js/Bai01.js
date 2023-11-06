@@ -71,7 +71,7 @@ tinhBtn.addEventListener('click', () => {
 
     if (+soCu > +soMoi) {
         hiddenInput.classList.add('is-invalid');
-        invalidFeedback.innerText = 'Số cũ phải nhỏ hơn số mới';
+        invalidFeedback.innerText = 'Số cũ không được lớn hơn số mới';
         return;
     }
 
