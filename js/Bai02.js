@@ -1,9 +1,9 @@
 const decimalInput = document.getElementById('decimal-input');
-const binaryInput = document.getElementById('binary-result');
+const binaryInput = document.getElementById('binary-input');
 const resultBinaryInput = document.getElementById('binary-result');
 const resultDecimalInput = document.getElementById('decimal-result');
-const buttonDecToBin = document.querySelector('btnDecToBin');
-const buttonBinToDec = document.querySelector('btnBinToDec');
+const buttonDecToBin = document.getElementById('btnDecToBin');
+const buttonBinToDec = document.getElementById('btnBinToDec');
 const invalidFeedback = document.querySelector('.invalid-feedback');
 
 function reset() {
@@ -100,12 +100,13 @@ function DecToBin(dec) {
     var bin = "";
     while (dec > 0) {
       var soDu = dec % 2;
-      bin = soDu + nhiPhan;
+      bin = soDu + bin;
       dec = Math.floor(dec / 2);
     }
   
     return bin;
 }
+
 function BinToDec(bin) {
     var dec = 0;
     var doDai = bin.length;
@@ -116,4 +117,4 @@ function BinToDec(bin) {
     }
   
     return dec;
-  }
+}
